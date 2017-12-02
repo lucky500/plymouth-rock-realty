@@ -16,6 +16,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor', '~> 0.0.3'
+gem 'devise', '~> 4.2'
+gem 'jquery-rails'
+gem "twitter-bootstrap-rails"
+gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'devise-bootstrap-views'
+gem 'font-awesome-rails'
+gem 'faker'
 
 
 group :development, :test do
@@ -24,6 +31,7 @@ group :development, :test do
   gem 'launch'
   gem 'pry'
   gem 'shoulda-matchers'
+  gem "factory_bot_rails", "~> 4.0"
 end
 
 group :development do
