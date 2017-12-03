@@ -1,0 +1,5 @@
+<h3>List of Properties</h3>
+
+<% @properties.each do |property| %>
+  <p><%= link_to property.address, property_path(property) %></p>
+<% end %>

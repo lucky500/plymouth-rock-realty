@@ -1,0 +1,47 @@
+<% if @property.errors.any? %>
+  <h3>The following errors prevented the addition of this property.</h3>
+  <ul>
+    <% @property.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @property do |f| %>
+  <div class="form-group col-xs-12">
+    <%= f.text_field :address, required: true, placeholder: "Address", class: "form-control" %>
+  </div>
+  <div class="form-group col-xs-12">
+    <%= f.text_field :property_type, required: true, placeholder: "Property Type", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :price, required: true, placeholder: "Price", class: "form-control"%>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :year_built, required: true, placeholder: "Year Built", class: "form-control"%>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :bedrooms, required: true, placeholder: "Bedrooms", class: "form-control"%>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :bathrooms, required: true, placeholder: "Bathrooms", class: "form-control"%>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :sqft, required: true, placeholder: "Sqft.", class: "form-control"%>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <%= f.text_field :lot, required: true, placeholder: "Lot Size", class: "form-control"%>
+    </div>
+  </div>
+  <div class="form-group col-xs-12">
+    <%= f.text_area :description, required: true, placeholder: "Description", class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= f.button :submit, class: "btn btn-success" %>
+  </div>
+<% end %>

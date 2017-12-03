@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2><%= @property.address %></h2>
+    <p><%= @property.property_type %></p>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <%= @property.price%>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <%= @property.year_built%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <%= @property.bedrooms %> Bedrooms
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <%= @property.bathrooms %> Bathrooms
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <%= @property.sqft %> Sqft
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <%= @property.lot %> lot size
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <p><%= @property.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-outline-warning' %>
+    <%= link_to 'Delete', property_path(@property), method: :delete, data: {confirm: 'Are you Sure?'}, class: 'btn btn-outline-danger' %>
+  </div>
+</div>
+<div class="row mt-5">
+  <%= link_to 'Back to all listings', properties_path, class: 'btn btn-outline-primary' %>
+</div>

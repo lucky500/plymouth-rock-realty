@@ -5,7 +5,7 @@ FactoryBot.define do
     description('++NEW PRICE++ WOW this private paradise will steal your heart! The property comprises 2 parcels (6.92 acres) which will convey together.')
     bedrooms('4')
     bathrooms('2 1/2')
-    type('Single Family')
+    property_type('Single Family')
     sqft('3508')
     lot('6.92')
     year_built('1974')

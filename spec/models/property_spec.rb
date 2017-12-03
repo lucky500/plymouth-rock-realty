@@ -26,7 +26,7 @@ RSpec.describe Property, type: :model do
     end
 
     it 'ensures presence of property type' do
-      expect(property.type).to(eq('Single Family'))
+      expect(property.property_type).to(eq('Single Family'))
     end
 
     it 'ensures presence of property sqft' do

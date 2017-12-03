@@ -3,3 +3,14 @@ html
 {
     font-size: 100%;
 }
+
+.form-group {
+  textarea {
+    height: 250px;
+    margin-top: 20px;
+  }
+}
+
+.btn-outline-primary {
+  margin: 0 auto;
+}
