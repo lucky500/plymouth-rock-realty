@@ -36,6 +36,8 @@ class PropertiesController < ApplicationController
   end
 
   def destroy
+    @property.destroy
+    redirect_to root_path
   end
 
   private
