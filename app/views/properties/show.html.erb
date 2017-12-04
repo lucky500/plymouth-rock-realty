@@ -42,3 +42,12 @@
 <div class="row mt-5">
   <%= link_to 'Back to all listings', properties_path, class: 'btn btn-outline-primary' %>
 </div>
+<div class="row all-comments">
+  <div class="col-xs-10 col-md-offset-1">
+    <h3>Comments:</h3>
+    <%= render @property.comments %>
+    <div>
+      <%= link_to 'Add a comment', new_property_comment_path(@property), class: 'btn btn-success' %>
+    </div>
+  </div>
+</div>

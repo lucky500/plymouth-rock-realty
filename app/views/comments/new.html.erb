@@ -1,5 +1,6 @@
-<h1>New Comment</h1>
-
-<%= render 'form', comment: @comment %>
-
-<%= link_to 'Back', comments_path %>
+<div class="col-xs-10 col-md-offset-col-1">
+  <div class="new-comment-form">
+    <h1>Add a Comment</h1>
+    <%= render 'form', comment: @comment %>
+  </div>
+</div>
