@@ -1,3 +1,11 @@
 <div class="comment">
   <p><%= comment.description %></p>
+  <% if user_signed_in? %>
+    <% if comment.user_id == current_user.id %>
+      <div class="btn-group" role="group">
+        <%= link_to 'Edit', edit_property_comment_path(comment.property,comment), class: 'btn btn-outline-warning btn-sm' %>
+        <%= link_to 'Delete', property_comment_path(comment.property,comment), method: :delete, data: {confirm: 'Are you Sure?'}, class: 'btn btn-outline-danger btn-sm' %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
