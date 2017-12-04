@@ -1,4 +1,7 @@
 FactoryBot.define do
+  factory :user do
+    
+  end
   factory(:property) do
     address('295 O Littleton County Rd, Harvard, MA 01451')
     price('575,000')

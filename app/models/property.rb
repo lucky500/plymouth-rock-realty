@@ -1,4 +1,6 @@
 class Property < ApplicationRecord
+  belongs_to :user
+  
   validates :address, presence: true, length: {minimum: 10}
   validates :price, presence: true
   validates :description, presence: true

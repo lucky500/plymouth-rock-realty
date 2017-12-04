@@ -29,19 +29,29 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <%= link_to "Link1", "/path1", class: 'nav-link' %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Link1", "/path1", class: 'nav-link' %>
+            <%= link_to 'Properties', properties_path, class: 'nav-link' %>
           </li>
           <li class="nav-item">
             <%= link_to "Add new Property", new_property_path, class: 'nav-link' %>
           </li>
+          
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav">
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
+            </li>
+            <%= link_to 'Log In', user_session_path, class: 'nav-link' %>
+          <% end %>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </nav>
 
@@ -53,43 +63,43 @@
           <%= yield %>
         </div>
         <div class="col-xs-12 col-lg-3">
-          <h3>Most Recent</h3>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
+          <%# if user_signed_in? %>
+            <div class="side-bar">
+              <h3>Most Recent</h3>
+              <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+              </div>
+              <img style="height: 200px; width: 100%; display: block;" src="http://via.placeholder.com/200x200" alt="Card image">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>
+              </div>
+              <hr class="my-4">
+              <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+              </div>
+              <img style="height: 200px; width: 100%; display: block;" src="http://via.placeholder.com/200x200" alt="Card image">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Card link</a>
+              </div>
+              <div class="card-footer text-muted">
+                2 days ago
+              </div>
+              </div>
             </div>
-            <img style="height: 200px; width: 100%; display: block;" src="http://via.placeholder.com/200x200" alt="Card image">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-          <hr class="my-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-            </div>
-            <img style="height: 200px; width: 100%; display: block;" src="http://via.placeholder.com/200x200" alt="Card image">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="card-link">Card link</a>
-            </div>
-            <div class="card-footer text-muted">
-              2 days ago
-            </div>
-          </div>
-
+          <%# end %>
         </div><!--/span-->
       </div><!--/row-->
 
-      <footer>
-        <p>&copy; Company 2017</p>
-      </footer>
-
     </div> <!-- /container -->
+      <%= render 'layouts/footer' %>
 
   </body>
 </html>
