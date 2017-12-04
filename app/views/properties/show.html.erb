@@ -34,10 +34,12 @@
   </div>
 </div>
 <div class="row mt-5">
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-outline-warning' %>
-    <%= link_to 'Delete', property_path(@property), method: :delete, data: {confirm: 'Are you Sure?'}, class: 'btn btn-outline-danger' %>
-  </div>
+  <% if current_user.admin %>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-outline-warning' %>
+      <%= link_to 'Delete', property_path(@property), method: :delete, data: {confirm: 'Are you Sure?'}, class: 'btn btn-outline-danger' %>
+    </div>
+  <% end %>
 </div>
 <div class="row mt-5">
   <%= link_to 'Back to all listings', properties_path, class: 'btn btn-outline-primary' %>

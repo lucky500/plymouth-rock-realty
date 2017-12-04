@@ -23,6 +23,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'devise-bootstrap-views'
 gem 'font-awesome-rails'
 gem 'faker'
+gem 'cancancan', '~> 2.0'
 
 
 group :development, :test do
