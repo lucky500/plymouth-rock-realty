@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :comment do
+    description "MyText"
+    user nil
+    property nil
+  end
   factory :user do
     
   end

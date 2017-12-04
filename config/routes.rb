@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'welcome#about'
 
-  resources :properties
+  resources :properties do
+    resources :comments
+  end
 end

@@ -1,5 +1,6 @@
 class Property < ApplicationRecord
   belongs_to :user
+  has_many :comments
   
   validates :address, presence: true, length: {minimum: 10}
   validates :price, presence: true
