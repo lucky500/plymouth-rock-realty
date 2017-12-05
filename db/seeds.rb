@@ -21,12 +21,12 @@ User.create!([
         admin: true
     },
     {
-        email: 'user4@test.com',
+        email: 'user3@test.com',
         password: '123456',
         password_confirmation: '123456',
     },
     {
-        email: 'user6@test.com',
+        email: 'user4@test.com',
         password: '123456',
         password_confirmation: '123456',
     }
@@ -44,7 +44,7 @@ Property.create!([
     sqft: '2,205',
     lot: '10,018',
     year_built: '2002',
-    user_id: Random.rand(1...4)
+    user_id: Random.rand(1..4)
   },
   {
     address: '46 Fairview Rd,Lunenburg, MA 01462',
@@ -56,7 +56,7 @@ Property.create!([
     sqft: '2,354',
     lot: '0.46',
     year_built: '1962',
-    user_id: Random.rand(1...4)
+    user_id: Random.rand(1..4)
   },
   {
     address: '59 Banbury Ln, Holden, MA 01520',
@@ -68,7 +68,7 @@ Property.create!([
     sqft: '3,016',
     lot: '1.2',
     year_built: '1972',
-    user_id: Random.rand(1...3)
+    user_id: Random.rand(1..4)
   }
 ])
 
@@ -79,7 +79,7 @@ property_id = Property.pluck(:id)
   Comment.create!([{
     description: Faker::Lorem.paragraph(2, true, 4),
     property_id: property_id.sample,
-    user_id: Random.rand(1...3)
+    user_id: Random.rand(1..4)
   }])
 end
 
