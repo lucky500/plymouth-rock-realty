@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# User.destroy_all
+User.create!([
+    {
+        email: 'user4@test.com',
+        password: 'valid_password',
+        password_confirmation: 'valid_password',
+    },
+    {
+        email: 'user6@test.com',
+        password: 'valid_password',
+        password_confirmation: 'valid_password',
+    }
+])
+
 #Property.destroy_all
 Property.create!([
   {
@@ -42,7 +56,7 @@ Property.create!([
     sqft: '3,016',
     lot: '1.2',
     year_built: '1972',
-    user_id: Random.rand(1...4)
+    user_id: Random.rand(1...3)
   }
 ])
 
@@ -53,15 +67,7 @@ property_id = Property.pluck(:id)
   Comment.create!([{
     description: Faker::Lorem.paragraph(2, true, 4),
     property_id: property_id.sample,
-    user_id: Random.rand(1...4)
+    user_id: Random.rand(1...3)
   }])
 end
-
-# User.destroy_all
-# 3.times do
-#   User.create!([{
-#     email: Faker::Name.email,
-#     property_id: property_id_to_i.sample
-#   }])
-# end
 

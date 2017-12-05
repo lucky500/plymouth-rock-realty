@@ -10,10 +10,11 @@
         <%= f.email_field :email, autofocus: true, class: 'form-control' %>
       </div>
       <div class="form-check">
-        <label class="form-check-label">
-          <%= f.check_box :admin, class: 'form-check-input' %>
+        <!-- <label class="form-check-label">
+          <%#= f.check_box :admin, class: 'form-check-input' %>
+          <%#= check_box_tag :admin, 1, admin? false : true %>
           Admin?
-        </label>
+        </label> -->
       </div>
       <div class="form-group">
         <%= f.label :password %>
