@@ -24,6 +24,7 @@ gem 'devise-bootstrap-views'
 gem 'font-awesome-rails'
 gem 'faker'
 gem 'cancancan', '~> 2.0'
+gem 'simplecov', require: false
 
 
 group :development, :test do

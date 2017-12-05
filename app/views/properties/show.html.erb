@@ -34,7 +34,7 @@
   </div>
 </div>
 <div class="row mt-5">
-  <% if current_user.admin %>
+  <% if user_signed_in? && current_user.admin %>
     <div class="btn-group" role="group" aria-label="Basic example">
       <%= link_to 'Edit', edit_property_path(@property), class: 'btn btn-outline-warning' %>
       <%= link_to 'Delete', property_path(@property), method: :delete, data: {confirm: 'Are you Sure?'}, class: 'btn btn-outline-danger' %>

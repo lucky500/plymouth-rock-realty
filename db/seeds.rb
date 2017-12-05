@@ -10,13 +10,13 @@
 User.create!([
     {
         email: 'user4@test.com',
-        password: 'valid_password',
-        password_confirmation: 'valid_password',
+        password: '123456',
+        password_confirmation: '123456',
     },
     {
         email: 'user6@test.com',
-        password: 'valid_password',
-        password_confirmation: 'valid_password',
+        password: '123456',
+        password_confirmation: '123456',
     }
 ])
 
