@@ -9,6 +9,18 @@
 # User.destroy_all
 User.create!([
     {
+        email: 'user1@test.com',
+        password: '123456',
+        password_confirmation: '123456',
+        admin: true
+    },
+    {
+        email: 'user2@test.com',
+        password: '123456',
+        password_confirmation: '123456',
+        admin: true
+    },
+    {
         email: 'user4@test.com',
         password: '123456',
         password_confirmation: '123456',
